@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",	
+	"tasks": [		
+		{
+			"type": "cppbuild",
+			"label": "build c_dll.dll",
+			"command": "gcc.exe",
+			"args": [ "-x", "c", "-shared", "-Wall", "-g", "library.c", 
+				"-o", "library.dll"],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": ["$gcc"],
+			"group": "build",
+			"detail": "compiler: \"gcc.exe\"",
+			"dependsOn":["Create temp folders for project C_DLL"]
+		},
+	
+		{
+			"type": "cppbuild",
+			"label": "build and run main.exe",
+			"command": ".\\main.exe",
+			"options": {
+				"cwd": "${workspaceFolder}\\${config:projects.main.outputDir}"
+			},
+			"args": [],
+			"group": "build",
+			"detail": "build main.exe and run it",
+			"dependsOn": ["build main.exe", "build library.dll"]
+		}
+	]
+}

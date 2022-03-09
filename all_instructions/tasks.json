@@ -1,0 +1,82 @@
+//===LIBRARY PROGRAM===
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "library_program.c", "-o", "library_program.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            } 
+
+        }
+    ]
+}
+
+
+//=== UNIT TESTING===
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "unit-testing.c", "-o", "unit-testing.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            } 
+
+        }
+    ]
+}
+
+
+//===LOAD TESTING===
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "load testing.c", "-o", "load testing.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            } 
+
+        }
+    ]
+}
+
+
+//===EXECUTION SPEED===
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "echo",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "execution speed C.c", "-o", "execution speed C.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            } 
+
+        }
+    ]
+}
